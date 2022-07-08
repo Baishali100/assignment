@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML content change</title>
+    </head>
+    <body>
+        <!-- HTML CONTENT CHANGE USING JAVASCRIPT -->
+        <p id="demo">Change this HTML content using JS</p>
+        <button type="button" onclick='document.getElementById("demo").innerHTML="Hello Javascript"'>Click Here!</button>
+    <!-- Change HTML Attribute value  -->
+    <br><br><button type="button" onclick="document.getElementById('myImage').src='emoji.png'">Click to change!</button>
+    <img id="myImage" src="smile.png" alt="smileemoji" width="240" height="240">
+    <button type="button" onclick="document.getElementById('myImage').src='smile.png'">Happy emoji</button>
+    <!-- Change HTML style with JS -->
+    <br><br><h1 id="myHeader">This is a header</h1>
+    <button type="button" onclick="document.getElementById('myHeader').style.fontSize='20px'">Click here to apply changes</button>
+<!-- Hide HTML element using JS -->
+<br><br><h1 id="hideHeader">Hide this Header</h1>
+<button type="button" onclick="document.getElementById('hideHeader').style.display='none'">Click to Hide</button>
+<!-- Show Content using Javascript -->
+<br><br><h1>Show Content</h1>
+<p id="showContent" style="display:none;">Hello Javascript</p>
+<button type="button" onclick="document.getElementById('showContent').style.display='block'">Click to Show</button>
+</body>
+</html>

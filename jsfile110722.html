@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is a Javascript example</title>
+        <h1 id="jsheading"></h1>
+    <script>
+        document.getElementById('jsheading').innerHTML="This is a JAVASCRIPT Example";
+        </script>
+    </head>
+<body>
+    <p id="para">This is a paragraph</p>
+    
+        <button type='button' onclick='document.getElementById("para").innerHTML="THIS IS THE NEW TEXT"'>Click Here</button>
+        <!-- Javascript Function -->
+<script>
+    function display(){
+        document.getElementById("jspara").innerHTML = "Paragraph changed";
+            }
+</script>
+<p id="jspara">Paragraph</p>
+<button type="button" onclick="display()">Try it</button>
+    </body>
+</html>

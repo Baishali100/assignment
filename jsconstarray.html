@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Constant Array and const Object</title>
+    </head>
+    <body>
+
+        <!-- Const Array -->
+        <h1 id="demo"></h1>
+        <p id="constobject"></p>
+        <p id="constobj"></p>
+        <script>
+            const arr=["audi","bmw","toyota"];
+            arr[0]="ferrari";
+            arr.push("mercedes");
+            document.getElementById('demo').innerHTML=arr;
+            // const object
+            const emp = {f_name:"abc", l_name:"xyz", addr:"ccc st"};
+            emp.f_name = "ggg";
+            emp.email = "ggg@gmail.com";
+            document.getElementById("constobject").innerHTML = "Emp email Id is " + emp.email;
+            //concat 
+            let text="what a ";
+            text +='nice day';
+            console.log(text);
+            </script>
+    </body>
+</html>

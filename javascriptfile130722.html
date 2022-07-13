@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="switchcs"></p>
+        <p id="forlp"></p>
+        <script>
+            // Switch Case
+            let day = 3;
+            let message;
+            switch (day) {
+                case 0:
+                    message = "Sunday";
+                    break;
+                case 1:
+                    message= "Monday";
+                    break;
+                    case 2:
+                    message= "Tuesday";
+                    break;
+                    case 3:
+                    message= "Wednesday";
+                    break;
+                    case 4:
+                    message= "Thursday";
+                    break;
+                    case 5:
+                    message= "Friday";
+                    break;
+                default:
+                    message = "Saturday";
+                    break;
+            }
+            document.getElementById("switchcs").innerHTML= "switch example: "+"Today is " +message;
+            </script>
+            <p id="forinlp"></p>
+            <script>
+                // For Loop
+                let info = "";
+                const person = ["abc","efg","hij","klm","nop","qrs"];
+                for(let i=0;i< person.length;i++){
+                     info +=person[i] + "<br>";
+                }
+                document.getElementById("forlp").innerHTML="For loop example: "+info; 
+
+                </script>
+                <script>
+                    // for in loop
+                    const car = ["audi","bmw","fiat","mercedes"];
+                    let carinfo ="";
+                    for(x in car){
+                        carinfo += car[x]+ " ";
+                    }
+                    document.getElementById("forinlp").innerHTML="for in loop example: " +carinfo;
+                </script>
+                <p id="arrforeach"></p>
+                <script>
+                    // array.forEach()
+                    let val = "";
+                    const details = ["abc",30,"xyz street"];
+                    details.forEach(myFunction);
+                    function myFunction(value,index,array){
+                        val += "<br>"+ value +"<br>";
+                    }
+                    document.getElementById("arrforeach").innerHTML="Array.forEach loop example: " +val;
+                    </script>
+                    <p id="foroflp"></p>
+                    <p id="foroflpstring"></p>
+
+                    <script>
+                        // For of loop
+                        const arr =["js","ts","react","angular"]; 
+                        let lang = "JAVASCRIPT";
+                        let text = "";
+                        let display = "";
+                        for(x of arr){
+                            text += "<br>"+ x +"<br>";
+                        }
+                        for(y of lang){
+                            display +="<br>"+ y +"<br>";
+                        }
+                        document.getElementById("foroflp").innerHTML="for of loop array example: " +text;
+                        document.getElementById("foroflpstring").innerHTML="for of loop string example: " +display;
+
+                        </script>
+                        <p id="whilelp"></p>
+                        <p id="dowhilelp"></p>
+                        <script>
+                            let i = 0;
+                            let j =0;
+                            const array = ["nisha","ria","sneha","shruti"];
+                            let valone = "";
+                            let valtwo = "";
+                            // While loop
+                            while(array[j]){
+                                valone +="<br>" + "The array values : " +array[j];
+                                j++;
+                            }
+                            // Do while loop
+                            do{
+                                valtwo += "<br>" + "The value of i is: " +i;
+                                i++;
+                            }
+                            while(i< 10)
+                            document.getElementById("whilelp").innerHTML="while loop example: "+valone;
+                            document.getElementById("dowhilelp").innerHTML="Do while loop example: "+valtwo;
+                            </script>
+        </body>
+    </html>

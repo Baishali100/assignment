@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="breakcondtn"></p>
+        <p id="continuecndtn"></p>
+        <p id="typof"></p>
+        <script>
+            let i=0;
+            let j =0;
+            let val= "";
+            let valone="";
+            let valtwo = "js";
+            for(i=0;i<10;i++){
+                if(i==4){
+                    break;
+                }
+                val += "<br>"+ "The value of i is: " +i;
+            }
+            for(j=0;j<10;j++){
+                if(j == 4){
+                    continue;
+                }
+                valone += "<br>"+ "The value of j is: " +j;
+            }
+            document.getElementById("breakcondtn").innerHTML="break statement example: " +val;
+            document.getElementById("continuecndtn").innerHTML="continue statement example: " +valone;
+
+            // typeof operator
+            document.getElementById("typof").innerHTML="typeof example: " +typeof valtwo;
+            </script>
+            <h3 id="todaydate"></h3>
+            <p id="todayday"></p>
+            <p id="todaydayname"></p>
+            <p id="todayminute"></p>
+            <p id="setyear"></p>
+            <p id="setmonth"></p>
+
+            <script>
+                // Date example
+                const d = new Date();
+                const days= ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+                let day;
+                day = days[d.getDay()];
+                // js date get methods
+                document.getElementById("todaydate").innerHTML="Today's date is: "+d;
+                document.getElementById("todayday").innerHTML="Today is: "+d.getDay();
+                // display day with name
+                document.getElementById("todaydayname").innerHTML="Today: "+day;
+                document.getElementById("todayminute").innerHTML="Today: "+d.getMinutes();
+            </script>
+            <script>
+                // js date set method
+                let dt=new Date();
+                let dat = new Date();
+                dt.setFullYear(2021);
+                dat.setMonth(3);
+                document.getElementById("setyear").innerHTML="setfullyear example: "+dt;
+                document.getElementById("setmonth").innerHTML="setmonth example: "+dat;
+
+
+                </script>
+    </body>
+</html>

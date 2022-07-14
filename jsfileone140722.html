@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- class inheritance -->
+        <p id="inheritnce"></p>
+        <script>
+        class myCar{
+            constructor(carname){
+                this.carname = carname;
+            }
+            display(){
+                return "The car name is " +this.carname;
+            }
+        }
+
+        class carDetails extends myCar{
+            constructor(carname,mod){
+                super(carname),
+                this.model= mod;
+            }
+            show(){
+                return this.display() +" and it is a "+this.model;
+            }
+        }
+        let carobj = new carDetails("Ford","Mustang");
+        document.getElementById("inheritnce").innerHTML = carobj.show();
+
+        </script>
+        <h3>Getter and Setter</h3>
+        <p id="getset"></p>
+        <script>
+        class Car {
+          constructor(brand) {
+            this.carname = brand;
+          }
+          get cnam() {
+            return this.carname;
+          }
+          set cnam(x) {
+            this.carname = x;
+          }
+        }
+        
+        let myCar = new Car("Ford");
+        document.getElementById("getset").innerHTML = myCar.cnam;
+        </script>
+        <p id="statcmethod"></p>
+        <p id="statc"></p>
+        <script>
+        class Car {
+          constructor(name) {
+            this.name = name;
+          }
+          static hello(x) {
+            return "Hello " + x.name;
+          }
+          static display(){
+            return this.name;
+          }
+        }
+        
+        let myCar = new Car("Ford");
+        document.getElementById("statcmethod").innerHTML = Car.hello(myCar);
+        document.getElementById("statc").innerHTML = Car.display();
+        </script>
+        </body>
+</html>

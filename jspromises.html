@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>JS PROMISES</h3>
+        <p id="proms"></p>
+        <script>
+           
+            function myFunc(some){
+                document.getElementById("proms").innerHTML=some;
+            }
+            let myPromise = new Promise(function(myResolve,myReject){
+                let x=0;
+                if(x==0){
+                    myResolve("okay");
+                }else{
+                    myReject("error");
+                }
+            });
+            myPromise.then(function(value){
+                myFunc(value);
+            },
+            function(error){
+                myFunc(error);
+            });
+            </script>
+            <!-- set time out using promise -->
+            <h4>Settime out method</h4>
+            <p id="promisesettmout"></p>
+            <script>
+                const myProms=new Promise(function(resolve,reject){
+                    setTimeout(function(){ resolve("JAVASCRIPT WORLD!!!");},3000)
+                });
+                myProms.then(function(value){
+                    document.getElementById("promisesettmout").innerHTML=value;
+                });
+                </script>
+                <!-- Async -->
+                <h5>Async</h5>
+                <p id="asyncjs"></p>
+                <script>
+                    function displayer(something){
+                        document.getElementById("asyncjs").innerHTML=something;
+                    }
+                    async function show(){
+                        return "Hello";
+                    }
+                    show().then(function(value){
+                        displayer(value);
+                    },
+                    function(error){
+                        displayer(error);
+                    });
+                    </script>
+                    <!-- Await -->
+                    <h5>Await</h5>
+                    <h5 id="awaitjs"></h5>
+
+                    <script>
+                    async function myDisplay() {
+                    let myPromise = new Promise(function(resolve, reject) {
+                        resolve("JAVASCRIPT WORLD!!!");
+                    });
+                    document.getElementById("awaitjs").innerHTML = await myPromise;
+                    }
+
+                    myDisplay();
+                    </script>
+                    <!-- await with settime out -->
+                    <h3>Await with settime out</h3>
+                    <p id="awaitwthsettmout"></p>
+                    <script>
+                        async function mynewFuncDisplay() {
+                        let mynewProms = new Promise(function(resolve) {
+                            setTimeout(function() {resolve("THIS IS JAVASCRIPT WORLD!!!");}, 3000);
+                        });
+                        document.getElementById("demo").innerHTML = await mynewProms;
+                        }
+
+                        mynewFuncDisplay();
+                        </script>
+
+
+    </body>
+    </html>

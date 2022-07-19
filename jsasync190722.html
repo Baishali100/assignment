@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- Asynchronous -->
+        <h3>Asynchronous</h3>
+        <p id="demo"></p>
+        <p id="demoone"></p>
+        <p id="demotwo"></p>
+        <script>
+            text = 'This is a Statement';
+            document.getElementById("demo").innerHTML = text;
+            </script>
+            <script>
+                setTimeout(() => {
+                textone='Displaying after 3 seconds.';
+                document.getElementById("demoone").innerHTML = textone;
+            }, 3000);
+            </script>
+            <script>
+                    texttwo='This is the third statement.';
+                    document.getElementById("demotwo").innerHTML = texttwo;
+                </script>
+                <!-- Synchrounous-->
+                <hr>
+                <br><h3>Synchronous</h3>
+                <p id="display"></p>
+                <p id="show"></p>
+                <p id="print"></p>
+                <script>
+                    function display(){
+                        message = 'This is display method';
+                    }
+                    display();
+                    document.getElementById("display").innerHTML=message;
+                </script>
+                <script>
+                   function show(){
+                        messageone = 'This is show method';
+                    }                   
+                    show();
+                    document.getElementById("show").innerHTML=messageone;
+
+                    </script>
+                    <script>
+                    function print(x){
+                        return x + 2;
+                    }
+                    document.getElementById("print").innerHTML=print(12);
+                </script>
+        </body>
+    </html>
